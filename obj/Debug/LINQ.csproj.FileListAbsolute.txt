@@ -4,3 +4,7 @@ C:\Users\z003p09u\documents\visual studio 2017\Projects\LINQ\LINQ\bin\Debug\LINQ
 C:\Users\z003p09u\documents\visual studio 2017\Projects\LINQ\LINQ\obj\Debug\LINQ.csprojResolveAssemblyReference.cache
 C:\Users\z003p09u\documents\visual studio 2017\Projects\LINQ\LINQ\obj\Debug\LINQ.exe
 C:\Users\z003p09u\documents\visual studio 2017\Projects\LINQ\LINQ\obj\Debug\LINQ.pdb
+C:\Users\z003p09u\documents\visual studio 2017\Projects\LINQ\LINQ\bin\Debug\LINQ.exe.manifest
+C:\Users\z003p09u\documents\visual studio 2017\Projects\LINQ\LINQ\bin\Debug\LINQ.application
+C:\Users\z003p09u\documents\visual studio 2017\Projects\LINQ\LINQ\obj\Debug\LINQ.exe.manifest
+C:\Users\z003p09u\documents\visual studio 2017\Projects\LINQ\LINQ\obj\Debug\LINQ.application

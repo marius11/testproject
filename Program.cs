@@ -8,8 +8,7 @@ namespace LINQ
     {
         static void Main(string[] args)
         {
-            string path = args.Length == 0 ? @"C:\Windows" : args[0];
-
+            string path = @"C:\Windows";
             ShowLargestFilesWithoutLinq(path, 75);
             Console.WriteLine("***");
             ShowLargestFilesWithLinq(path, 75);
@@ -25,13 +24,15 @@ namespace LINQ
 
             if (top > results.Count())
             {
-                Console.WriteLine("Warning: There aren't enough files to create a top " + top + " list!");
+                Console.WriteLine("There aren't enough files to create a top " + top + " list!");
             }
-
-            int i = 0;
-            foreach (var file in results)
+            else
             {
-                Console.WriteLine($"#{++i,-6}{file.Name,-20} : {file.Length,10:N0} B");
+                int i = 0;
+                foreach (var file in results)
+                {
+                    Console.WriteLine($"#{++i,-6}{file.Name,-20} : {file.Length,10:N0} B");
+                }
             }
         }
 
@@ -43,13 +44,15 @@ namespace LINQ
 
             if (top > results.Count())
             {
-                Console.WriteLine("Warning: There aren't enough files to create a top " + top + " list!");
+                Console.WriteLine("There aren't enough files to create a top " + top + " list!");
             }
-
-            int i = 0;
-            foreach (var file in results.Take(top))
+            else
             {
-                Console.WriteLine($"#{++i,-5}{file.Name,-20} : {file.Length,10:N0} B");
+                int i = 0;
+                foreach (var file in results.Take(top))
+                {
+                    Console.WriteLine($"#{++i,-5}{file.Name,-20} : {file.Length,10:N0} B");
+                }
             }
         }
 
@@ -60,14 +63,15 @@ namespace LINQ
 
             if (top > files.Length)
             {
-                Console.WriteLine("Warning: There aren't enough files to create a top " + top + " list!");
-                top = files.Length;
+                Console.WriteLine("There aren't enough files to create a top " + top + " list!");
             }
-
-            Array.Sort(files, new FileInfoComparer());
-            for (int i = 0; i < top; i++)
+            else
             {
-                Console.WriteLine($"#{i + 1,-6}{files[i].Name,-20} : {files[i].Length,10:N0} B");
+                Array.Sort(files, new FileInfoComparer());
+                for (int i = 0; i < top; i++)
+                {
+                    Console.WriteLine($"#{i + 1,-6}{files[i].Name,-20} : {files[i].Length,10:N0} B");
+                }
             }
         }
     }
